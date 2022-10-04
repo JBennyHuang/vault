@@ -7,4 +7,9 @@ class CredientialRepository extends SQLiteRepository {
   List<Credential> getCredentials() {
     return [];
   }
+
+  @override
+  void onInit() {
+    // TODO: implement onInit
+  }
 }
