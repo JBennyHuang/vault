@@ -5,11 +5,13 @@ abstract class SQLiteRepository {
   Database? database;
 
   SQLiteRepository() {
-    init();
+    _init();
   }
 
-  void init() async {
-    database = await openDatabase(join(await getDatabasesPath(), "secret.db"));
+  void _init() async {
+    database =
+        await openDatabase(join(await getDatabasesPath(), "database.sqlite"));
+    onInit();
   }
 
   void onInit();
